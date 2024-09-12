@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script> 
+    <title>Dates & Time</title>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Decorate Page</legend>
+        <label for="backgroundColorInput">Select Background Color:</label>
+        <input type="color" id="backgroundColorInput" name="backgroundColor">
+    </fieldset>
+
+    <form class="form" id="yourForm">
+        <fieldset>
+            <legend>Your Information</legend>
+            <label for="nameInput">Name: </label>
+            <input type="text" id="nameInput" name="name">
+
+            <label for="birthDateInput">DOB: </label>
+            <input type="date" id="birthDateInput" name="birthDate">
+
+            <label for="endDateInput">End: </label>
+            <input type="date" id="endDateInput" name="endDate">
+
+            <button type="submit" id="calcCurAgeButton" name="calcCurAgeButton">Calculate Current Age</button>
+            <button type="submit" id="calcAgeAt" name="calcAgeAt">Calculate Age At Date</button>
+        </fieldset>
+    </form>
+
+    <form class="form" id="datesForm">
+        <fieldset>
+            <legend>Other Date Calculations</legend>
+            <label for="fromDateInput">From: </label>
+            <input type="date" id="fromDateInput" name="fromDate">
+            <label for="toDateInput">To: </label>
+            <input type="date" id="toDateInput" name="toDate">
+
+            <button type="submit" id="calcTimeDiffButton" name="calcTimeDiffButton">Calculate Time Difference</button>          
+        </fieldset>
+    </form>
+    
+</body>
+</html>
