@@ -13,6 +13,14 @@
         <legend>Decorate Page</legend>
         <label for="backgroundColorInput">Select Background Color:</label>
         <input type="color" id="backgroundColorInput" name="backgroundColor">
+        <br>
+
+        <label for="fontStyleInput">Select Font Style:</label>
+        <select id="fontStyleInput" name="fontStyle">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans Serif</option>
+            <option value="monospace">Monospace</option>
+        </select>
     </fieldset>
 
     <form class="form" id="yourForm">
@@ -20,17 +28,19 @@
             <legend>Your Information</legend>
             <label for="nameInput">Name: </label>
             <input type="text" id="nameInput" name="name">
-
+            <br>
             <label for="birthDateInput">DOB: </label>
             <input type="date" id="birthDateInput" name="birthDate">
 
             <label for="endDateInput">End: </label>
             <input type="date" id="endDateInput" name="endDate">
-
-            <button type="submit" id="calcCurAgeButton" name="calcCurAgeButton">Calculate Current Age</button>
-            <button type="submit" id="calcAgeAt" name="calcAgeAt">Calculate Age At Date</button>
+            <br>
+            <button type="button" id="calcCurAgeButton" name="calcCurAgeButton">Calculate Current Age</button>
+            <button type="button" id="calcAgeAt" name="calcAgeAt">Calculate Age At Date</button>
         </fieldset>
     </form>
+
+    <div class="calculations" id="calcYourInfo"></div>
 
     <form class="form" id="datesForm">
         <fieldset>
@@ -39,10 +49,12 @@
             <input type="date" id="fromDateInput" name="fromDate">
             <label for="toDateInput">To: </label>
             <input type="date" id="toDateInput" name="toDate">
-
-            <button type="submit" id="calcTimeDiffButton" name="calcTimeDiffButton">Calculate Time Difference</button>          
+            <br>
+            <button type="button" id="calcTimeDiffButton" name="calcTimeDiffButton">Calculate Time Difference</button>          
         </fieldset>
     </form>
+
+    <div class="calculations" id="calcOtherInfo"></div>
     
 </body>
 </html>
