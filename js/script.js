@@ -16,6 +16,14 @@ const CUR_AGE_BUTTON = document.getElementById('calcCurAgeButton');
 const AGE_AT_BUTTON = document.getElementById('calcAgeAt');
 const TIME_DIFF_BUTTON = document.getElementById('calcTimeDiffButton');
 
+const DISPLAY_YOUR_INFO = document.getElementById('displayYourInfo');
+const DISPLAY_OTHER_INFO = document.getElementById('displayOtherInfo');
+
+let NAME = "____";
+let DOB = "_/_/_"; let END = "_/_/_";
+let FROM = "_/_/_"; let TO = "_/_/_";
+
+
 BACKGROUND_COLOR_INPUT.addEventListener('input', setBackgroundColor);
 FONT_STYLE_INPUT.addEventListener('input', setfontStyle);
 
@@ -65,37 +73,46 @@ function calcTimeDifference(startDate, endDate) {
 function calcCurrentAge(e) {
     e.preventDefault();
 
-    const NAME = NAME_INPUT.value;
-    const DOB = DOB_INPUT.value;
+    if (NAME_INPUT.value != "") { NAME = NAME_INPUT.value; }
+    if (DOB_INPUT.value != "") { DOB = DOB_INPUT.value; }
     const TODAY = Date();
 
     const TIME_DIFF = calcTimeDifference(DOB, TODAY);
     const AGE = `${NAME} was born ${TIME_DIFF} ago.`; 
 
     console.log(AGE);
+
+    DISPLAY_YOUR_INFO.style.display = "block";
+    DISPLAY_YOUR_INFO.textContent = AGE;
 }
 
 function calcAgeAt(e) {
     e.preventDefault();
 
-    const NAME = NAME_INPUT.value;
-    const DOB = DOB_INPUT.value;
-    const END = END_DATE_INPUT.value;
+    if (NAME_INPUT.value != "") { NAME = NAME_INPUT.value; }
+    if (DOB_INPUT.value != "") { DOB = DOB_INPUT.value; }
+    if (END_DATE_INPUT.value != "") { END = END_DATE_INPUT.value; }
 
     const TIME_DIFF = calcTimeDifference(DOB, END);
-    const AGE = `On ${END}, ${NAME} will be ${TIME_DIFF} old.`; 
+    const AGE = `On ${END}, ${NAME} was/will be ${TIME_DIFF} old.`; 
 
     console.log(AGE);
+
+    DISPLAY_YOUR_INFO.textContent = AGE;
+    DISPLAY_YOUR_INFO.style.display = "block";
 }
 
 function calcDifference(e) {
     e.preventDefault();
-
-    const FROM = FROM_DATE_INPUT.value;
-    const TO = TO_DATE_INPUT.value;
+    
+    if (FROM_DATE_INPUT.value != "") { FROM = FROM_DATE_INPUT.value; }
+    if (TO_DATE_INPUT.value != "") { TO = TO_DATE_INPUT.value; }
 
     const TIME_DIFF = calcTimeDifference(FROM, TO);
     const DIFF = `The difference from ${FROM} to ${TO} is ${TIME_DIFF}.`; 
 
     console.log(DIFF);
+
+    DISPLAY_OTHER_INFO.textContent = DIFF;
+    DISPLAY_OTHER_INFO.style.display = "block";
 }

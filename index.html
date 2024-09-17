@@ -12,7 +12,7 @@
     <fieldset>
         <legend>Decorate Page</legend>
         <label for="backgroundColorInput">Select Background Color:</label>
-        <input type="color" id="backgroundColorInput" name="backgroundColor">
+        <input type="color" id="backgroundColorInput" name="backgroundColor" value="#ffffff">
         <br>
 
         <label for="fontStyleInput">Select Font Style:</label>
@@ -30,7 +30,7 @@
             <input type="text" id="nameInput" name="name">
             <br>
             <label for="birthDateInput">DOB: </label>
-            <input type="date" id="birthDateInput" name="birthDate">
+            <input type="date" id="birthDateInput" name="birthDate" value="">
 
             <label for="endDateInput">End: </label>
             <input type="date" id="endDateInput" name="endDate">
@@ -40,7 +40,8 @@
         </fieldset>
     </form>
 
-    <div class="calculations" id="calcYourInfo"></div>
+    <fieldset class="calculationDisplay" id="displayYourInfo">
+    </fieldset>
 
     <form class="form" id="datesForm">
         <fieldset>
@@ -54,7 +55,7 @@
         </fieldset>
     </form>
 
-    <div class="calculations" id="calcOtherInfo"></div>
+    <fieldset class="calculationDisplay" id="displayOtherInfo"></fieldset>
     
 </body>
 </html>
